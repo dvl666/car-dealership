@@ -1,3 +1,7 @@
+/**
+ * Archivo de configuración de ESLint.
+ * Se reduce a una serie de buenas practicas para programar bajo ciertos estandares.
+ */
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
