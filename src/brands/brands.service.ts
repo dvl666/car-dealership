@@ -8,21 +8,21 @@ import { Brand } from './entities/brand.entity';
 export class BrandsService {
 
   private brands: Brand[] = [
-    {
-      id: uuid(),
-      name: 'Brand 1',
-      createdAt: new Date().getTime(),
-    },
-    {
-      id: uuid(),
-      name: 'Brand 2',
-      createdAt: new Date().getTime(),
-    },
-    {
-      id: uuid(),
-      name: 'Brand 3',
-      createdAt: new Date().getTime(),
-    }
+    // {
+    //   id: uuid(),
+    //   name: 'Brand 1',
+    //   createdAt: new Date().getTime(),
+    // },
+    // {
+    //   id: uuid(),
+    //   name: 'Brand 2',
+    //   createdAt: new Date().getTime(),
+    // },
+    // {
+    //   id: uuid(),
+    //   name: 'Brand 3',
+    //   createdAt: new Date().getTime(),
+    // }
   ]
 
   create(createBrandDto: CreateBrandDto): Brand {
@@ -67,4 +67,9 @@ export class BrandsService {
     );
     return `Brand with id '${id}' has been deleted`;
   }
+
+  fillBrandsWithSeedData( brands: Brand[] ) {
+    return this.brands = brands;
+  }
+
 }
