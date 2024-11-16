@@ -8,6 +8,7 @@ import { CarsService } from './cars.service';
 
 @Module({
   controllers: [CarsController],
-  providers: [CarsService]
+  providers: [CarsService],
+  exports: [CarsService] //De esta manera conseguimos poder exportar el servicio para poder usarlo en otros módulos (ver seed.module.ts)
 })
 export class CarsModule {}

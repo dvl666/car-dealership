@@ -11,30 +11,30 @@ import { UpdateCarDto } from './dtos/update-car.dto';
 export class CarsService {
 
     private cars: Car[] = [
-        {
-            id: "f97c5b8b-7e76-45ed-ba11-355ac8272f5d",
-            brand: 'Toyota',
-            model: 'Corolla',
-            year: 2019
-        },
-        {
-            id: "25623e6d-7ba5-45bf-9029-7c91ddfd07ae",
-            brand: 'Toyota',
-            model: 'Yaris',
-            year: 2019
-        },
-        {
-            id: "91430bd7-3946-4936-bd38-94333ba4c6c3",
-            brand: 'Toyota',
-            model: 'Hilux',
-            year: 2019
-        },
-        {
-            id: "1a6a871d-1593-4240-9642-ae7f8ec021cd",
-            brand: 'Toyota',
-            model: 'Rav4',
-            year: 2019
-        }
+        // {
+        //     id: "f97c5b8b-7e76-45ed-ba11-355ac8272f5d",
+        //     brand: 'Toyota',
+        //     model: 'Corolla',
+        //     year: 2019
+        // },
+        // {
+        //     id: "25623e6d-7ba5-45bf-9029-7c91ddfd07ae",
+        //     brand: 'Toyota',
+        //     model: 'Yaris',
+        //     year: 2019
+        // },
+        // {
+        //     id: "91430bd7-3946-4936-bd38-94333ba4c6c3",
+        //     brand: 'Toyota',
+        //     model: 'Hilux',
+        //     year: 2019
+        // },
+        // {
+        //     id: "1a6a871d-1593-4240-9642-ae7f8ec021cd",
+        //     brand: 'Toyota',
+        //     model: 'Rav4',
+        //     year: 2019
+        // }
     ];
 
     findAll() {
@@ -85,6 +85,10 @@ export class CarsService {
          */
         this.cars = this.cars.filter(car => car.id !== carId);
         return `Car with id '${carId}', was deleted`;
+    }
+
+    fillCarsWithSeedData( cars: Car[] ) {
+        return this.cars = cars;
     }
 
 }
