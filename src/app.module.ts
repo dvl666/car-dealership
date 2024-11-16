@@ -15,3 +15,8 @@ import { SeedModule } from './seed/seed.module';
   exports: [],
 })
 export class AppModule {}
+/**
+ * Para pasar a produccion se ejecuta:
+ *  npm build
+ *  npm run start:prod
+ */
