@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { CarsModule } from './cars/cars.module';
+import { BrandsModule } from './brands/brands.module';
 
 /**
  * Los modulos agrupan y desacoplan un conjunto de funcionalidad especíca por dominio.
@@ -7,7 +8,7 @@ import { CarsModule } from './cars/cars.module';
  */
 
 @Module({
-  imports: [CarsModule],
+  imports: [CarsModule, BrandsModule],
   controllers: [],
   providers: [],
   exports: [],
